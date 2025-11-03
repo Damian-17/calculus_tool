@@ -28,5 +28,5 @@ venv\Scripts\activate
 # Для Mac/Linux:
 source venv/bin/activate
 
-# Запуск проекта:
+# Запуск проекта через терминал:
 py calculator.py
