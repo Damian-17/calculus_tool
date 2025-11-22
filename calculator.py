@@ -16,16 +16,35 @@ def divide(a, b):
         return "Ошибка: на ноль делить нельзя!"
     return a / b
 
-# Тестируем и выводим результаты
-print("Тестируем функции:")
-print(f"5 + 3 = {add(5, 3)}")
-print(f"10 - 4 = {subtract(10, 4)}")  
-print(f"6 * 7 = {multiply(6, 7)}")
-print(f"15 / 3 = {divide(15, 3)}")
-print(f"Попытка деления на ноль: {divide(10, 0)}")
+# ВВОД ОТ ПОЛЬЗОВАТЕЛЯ
+print("Введите два числа для вычислений:")
+a = float(input("Первое число: "))
+b = float(input("Второе число: "))
+
+print("\nВыберите операцию:")
+print("1 - Сложение")
+print("2 - Вычитание") 
+print("3 - Умножение")
+print("4 - Деление")
+
+choice = input("Ваш выбор (1-4): ")
+
+if choice == '1':
+    result = add(a, b)
+    print(f" Результат: {a} + {b} = {result}")
+elif choice == '2':
+    result = subtract(a, b)
+    print(f" Результат: {a} - {b} = {result}")
+elif choice == '3':
+    result = multiply(a, b)
+    print(f" Результат: {a} * {b} = {result}")
+elif choice == '4':
+    result = divide(a, b)
+    print(f"Результат: {a} / {b} = {result}")
+else:
+    print(" Неверный выбор операции!")
 
 print("=" * 30)
 print(" Программа завершена успешно!")
-
 
 input("Нажмите Enter для выхода...")
